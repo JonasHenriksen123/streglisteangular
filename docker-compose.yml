@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  streglisteangular:
+    image: ${DOCKER_REGISTRY-}streglisteangular
+    build:
+      context: .
+      dockerfile: streglisteangular/Dockerfile
+    ports:
+     - "4015:443"
+     - "4016:80"
