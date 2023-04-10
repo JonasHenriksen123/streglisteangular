@@ -16,3 +16,20 @@ input {
   border-radius: .25rem;
 }
 
+th.cdk-header-cell {
+    text-align: center;
+}
+
+td.cdk-column-edit {
+  text-align: center;
+}
+
+  td.cdk-column-edit button {
+      display:inline-flex!important;
+  }
+
+  td.cdk-column-amount,
+  td.cdk-column-lines {
+    text-align: end
+  }
+
