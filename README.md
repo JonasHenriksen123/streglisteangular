@@ -17,5 +17,5 @@ Angular CLI using typescript.
 Using docker. "deploy.cmd" in root of project.
 Docker must be locally configured to push to google storage buckets.
 
-After the push a new revision must be made to the Google run instance to for changes to take effect.
+After the push a new revision must be made to the Google run instance for changes to take effect.
 
