@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
-import { Inject, Injectable, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Inject, Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +11,11 @@ export class UserService {
   constructor(private http: HttpClient,
     @Inject('BASE_URL') private baseurl: string) {
     this.users = this.http.get<User[]>(this.baseurl + 'user');
-    /* use for local development
-    this.users = new Observable(s => {
-      s.next([new User("jonas", 2), new User("Johan", 10), new User("jonas", 2), new User("Johan", 10), new User("jonas", 2), new User("Johan", 10), new User("jonas", 2), new User("Johan", 10), new User("jonas", 2), new User("Johan", 10)])
-    });
-    */
+
+    /* use for local development */
+    /*this.users = new Observable(s => {
+      s.next([new User("jonas", 2), new User("Johan", 40), new User("jonas", 2), new User("Johan", 10), new User("jonas", 2), new User("Johan", 10), new User("jonas", 2), new User("Johan", 10), new User("jonas", 2), new User("Johan", 10)]);
+    });*/
   }
 
   async updateAll(): Promise<User[] | undefined> {

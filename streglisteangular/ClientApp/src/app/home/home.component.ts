@@ -38,6 +38,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.userService.updateUser(user).then(res => {
       user.lines = res?.lines;
       user.editing = false;
+      if (res?.lines !== undefined && res?.lines >= 40) {
+        window.alert("Betal din regning din bums!")
+      }
     }, () => {
       window.alert("Kan ikke gemme");
       this.userService.updateAll().then(r => {

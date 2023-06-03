@@ -14,8 +14,10 @@ Angular CLI using typescript.
 "ng serve" in "streglisteangular\ClientApp"
 
 ### Deployment
-Using docker. "deploy.cmd" in root of project.
+Using docker. Run "deploy.cmd" in root of project.
+
 Docker must be locally configured to push to google storage buckets.
+[Setup docker](https://cloud.google.com/sdk/gcloud/reference/auth/configure-docker)
 
 After the push a new revision must be made to the Google run instance to for changes to take effect.
-
+[Managing revisions](https://cloud.google.com/run/docs/managing/revisions)
